@@ -8,6 +8,7 @@
     --stone-150: hsl(30, 18%, 87%);
     --stone-600: hsl(30, 10%, 34%);
     --stone-900: hsl(24, 5%, 18%);
+    --transparent-grey: rgba(128, 128, 128, 0.388);
     --white: hsl(0, 0%, 100%);
     --primary-font-family: "Outfit";
     --secondary-font-family: "Young Serif";
@@ -79,6 +80,7 @@ body {
 }
 span.stages {
     font-weight: 700;
+    padding-left: 10px;
 }
 /* new; ::marker */
 .timing li::marker,
@@ -89,7 +91,9 @@ span.stages {
 /* ingredient section */
 .ingredients {
     padding: .5em;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+.ingredients span {
+    padding-left: 10px;
 }
 .h-brown {
     font-size: 1.7em;
@@ -104,7 +108,6 @@ span.stages {
 /* instructions section */
 .instructions{
     padding: 1.4em 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
 }
 .instruction {
     margin-top: 5px;
@@ -119,15 +122,22 @@ span.stages {
 .steps li {
     width: 90%;
 }
-.instructions span.stages {
-    padding-left: 10px;
-}
 
 /* nutrient section */
 .nutrition {
     margin: 1rem  0;
 }
-
+.nutrient-table table{
+    width: 100%;
+    text-align: center;
+    margin: 17px 0;
+}
+.nutrient-table td {
+    padding: 1rem 0;
+}
+.btm-border{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
 
 /* Reusables */
 .container {
@@ -138,9 +148,13 @@ span.stages {
 .flex{
     display: flex;
 }
+.btm-border{
+    border-bottom: 1px solid var(--transparent-grey);
+}
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 10px 0;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
